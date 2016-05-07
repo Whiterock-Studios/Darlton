@@ -1,0 +1,74 @@
+.slider {
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.slider__inner {
+	position: relative;
+}
+
+.next, .prev {
+	@extend %tran--long;
+	position: absolute;
+	top:50%;
+	cursor: pointer;
+	transform: translatey(-50%);
+
+	@include media(max-width $phone) {
+		opacity: 0.5;
+	}
+
+	&:active {
+		opacity: 0.4;
+	}
+}
+
+.darlton__cleaning .next, .darlton__cleaning .prev {
+	&:hover {
+		@extend .color--cleaning;
+	}
+}
+
+.forum__foods .next, .forum__foods .prev {
+	&:hover {
+		@extend .color--forum;
+	}
+}
+
+.darlton__vending .next, .darlton__vending .prev {
+	&:hover {
+		@extend .color--vending;
+	}
+}
+
+.next {
+	right:0;
+}
+
+.prev {
+	left: 0;
+}
+
+.slide {
+	display: inline-block;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	transition: 2s opacity;
+
+	@include media(max-width $phone) {
+		display: block;
+		padding: 0 50px;
+	}
+}
+
+.slide--active {
+	opacity: 1;
+	width: auto;
+	height: auto;
+}

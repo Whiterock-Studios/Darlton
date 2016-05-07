@@ -1,0 +1,77 @@
+@import '_burger';
+
+header {
+	height: 0;
+	// TODO: Something when the header is on a white background
+}
+
+.header__logo {
+	@extend %tran--long;
+	display: inline-block;
+	position: fixed;
+	top: -100px;
+	right: 50%;
+	transform: translatex(50%);
+	z-index: 150;
+
+	img {
+		max-height: 40px;
+
+		@include media(max-width $phone) {
+			max-height: 25px;
+		}
+	}
+
+	@include media(max-width $phone) {
+		right: 30px;
+		transform: translatex(0);
+	}
+}
+
+.header__menu {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.header__menu__menu {
+	@extend %tran--long;
+	position: fixed;
+	overflow-y: auto;
+	top: 0;
+	left: -400px;
+	width: auto;
+	height: 100%;
+	padding: 120px 30px;
+	font-size: 1.3em;
+	z-index: 99;
+	background: #fff;
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+	ul {
+		position: relative;
+		display: inline-block;
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	a {
+		@extend %tran--long;
+		color: inherit;
+		text-decoration: none;
+		padding: 20px 0;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		left: -300px;
+	}
+
+	.current_page_item a {
+		text-decoration: underline;
+	}
+}
+
+.header__menu__menu--open {
+	left: 0;
+}

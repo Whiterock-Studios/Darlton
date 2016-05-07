@@ -1,0 +1,36 @@
+{
+  "name": "darlton-limited",
+  "version": "1.0.0",
+  "description": "WordPress theme for Darlton Ltd's website.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.1"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "3D",
+    "Printing"
+  ],
+  "author": "Whiterock Studios",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whiterock-studios/Darlton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whiterock-studios/Darlton/issues"
+  },
+  "homepage": "https://github.com/whiterock-studios/Darlton#readme",
+  "devDependencies": {
+    "bower": "^1.7.7"
+  }
+}

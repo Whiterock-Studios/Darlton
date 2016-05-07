@@ -1,0 +1,16 @@
+@import '../../vendor/normalize/_normalize';
+
+@import '../../vendor/bourbon/_bourbon';
+@import '../../vendor/neat/_neat';
+@import '_grid-settings';
+@import '_variables.scss';
+
+@import '_header';
+@import '_slide-in';
+@import '_body';
+@import'_slider';
+@import '_company-template';
+@import '_footer';
+
+// get font awesome scss
+@import '../../vendor/font-awesome/scss/font-awesome';

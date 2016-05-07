@@ -1,0 +1,314 @@
+.company__section__1 {
+	display: block;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 30px;
+	color: #fff;
+	position: relative;
+
+	@media screen and (max-height: $phone), screen and (max-width: $phone) {
+		min-height: auto;
+		padding: 80px 0;
+	}
+}
+
+.shade {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 0;
+}
+
+.company__section__1__slider {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 0 15px;
+	max-width: 650px;
+
+	@media screen and (max-width: $phone), screen and (max-height: $phone) {
+		position: relative;
+		transform: translate(0, 0);
+		top: 0;
+		left: 0;
+		padding: 100px 15px 50px 15px;
+	}
+}
+
+// .company__section__1__slider__slide {
+
+// }
+
+.company__section__1__slider__slide__heading {
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+
+	@include media(max-width $phone) {
+		padding: 0;
+	}
+}
+
+.company__section__1__slider__slide__body {
+	font-size: 1.2em
+}
+
+.company__section__1__slider__slide__button {
+	margin: 20px 20px 10px 20px;
+
+	@include media(max-width $phone) {
+		display: block;
+		width: 100%;
+		margin: 20px 0 10px 0;
+
+		&:last-of-type {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.darlton__cleaning .company__section__1__slider__slide__button:nth-of-type(even) {
+	background: lighten($purple, 15%);
+}
+
+.darlton__vending .company__section__1__slider__slide__button:nth-of-type(even) {
+	background: lighten($brown, 15%);
+}
+
+.forum__foods .company__section__1__slider__slide__button:nth-of-type(even) {
+	background: lighten($light-blue, 15%);
+}
+
+.company__section__1__menu {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
+	ul {
+		display: table;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		table-layout: fixed;
+		line-height: 100%;
+	}
+
+	li {
+		display: table-cell;
+	}
+
+	a {
+		@extend %button-hover;
+		z-index: 1;
+		position: relative;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		padding: 30px 15px;
+		color: #fff;
+		text-decoration: none;
+		letter-spacing: 2px;
+		line-height: 1.5;
+	}
+
+	@include media(max-height $phone) {
+		position: relative;
+	}
+
+	@include media(max-width $phone) {
+		display: none;
+	}
+}
+
+/* 
+* This is where section 2 starts
+*/
+
+.company__section__2 {
+	padding: 80px 15px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+	.container {
+		max-width: 1000px;
+	}
+}
+
+.company__section__2__body {
+	font-size: 1.2em;
+}
+
+.darlton__cleaning {
+
+	.company__section__2__title {
+		@extend .color--cleaning;
+	}
+}
+
+.forum__foods {
+	.company__section__2__title {
+		@extend .color--forum;
+	}
+}
+
+.darlton__vending {
+	.company__section__2__title {
+		@extend .color--vending;
+	}
+}
+
+.company__section__2__boxes {
+	@include outer-container();
+}
+
+.company__section__2__box {
+	display: inline-block;
+	width: 32%;
+	padding: 40px 0;
+	margin: 0 auto;
+
+	@include media(max-width $tablet) {
+		width: 100%;
+	}
+}
+
+.company__section__2__box__amount {
+	font-size: 4em;
+	display: block;
+	line-height: 1;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.company__section__2__box__text {
+	font-size: 1.2em;
+}
+
+.darlton__cleaning {
+	.company__section__2__box__inner {
+		@extend .color--cleaning;
+		min-width: 225px;
+		display: inline-block;
+		padding: 40px;
+		border: solid 5px #fff;
+	}
+}
+
+.forum__foods {
+	.company__section__2__box__inner {
+		color: #fff;
+		min-width: 225px;
+		display: inline-block;
+		padding: 40px;
+		border: solid 5px #fff;
+		border-radius: 50%;
+	}
+}
+
+.company__section__2__button {
+	margin: 20px;
+
+	@include media(max-width $phone) {
+		// width:auto;
+		display: block;
+	}
+}
+
+.forum__foods {
+	.company__section__2__button {
+		&:nth-of-type(odd) {
+			background: lighten($light-blue, 15%);
+		}
+	}
+}
+
+.darlton__cleaning {
+	.company__section__2__button {
+		&:nth-of-type(odd) {
+			background: lighten($purple, 15%);
+		}
+	}
+}
+
+.darlton__vending {
+	.company__section__2__button {
+		&:nth-of-type(odd) {
+			background: lighten($brown, 15%);
+		}
+	}
+}
+
+// // //
+// This is where section 3 starts
+// // //
+
+//.company__section__3 {
+//}
+
+.company__section__3__divider {
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+	@include clearfix;
+
+	h3 {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-size: 1.5em;
+	}
+}
+
+.company__section__3__section {
+	@include clearfix;
+	position: relative;
+	padding: 150px 15px;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: #fff;
+}
+
+.company__section__3__section__inner {
+	max-width: 500px;
+}
+
+.company__section__3__section__heading {
+	margin-top: 0;
+}
+
+.company__section__3__section__body {
+	font-size: 1.2em;
+}
+
+.company__section__3__section__button {
+	margin: 20px 20px 0 0;
+	font-size: 1.2em;
+
+	&:nth-of-type(odd) {
+		background: $light-grey;
+	}
+}
+
+.darlton__cleaning .company__section__3__section__button:nth-of-type(odd):after {
+	@extend .bg--cleaning;
+}
+
+.forum__foods .company__section__3__section__button:nth-of-type(odd):after {
+	@extend .bg--forum;
+}
+
+.darlton__vending .company__section__3__section__button:nth-of-type(odd):after {
+	@extend .bg--vending;
+}

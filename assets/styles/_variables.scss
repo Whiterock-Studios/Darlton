@@ -1,0 +1,62 @@
+$dark-grey: #323232;
+$med-grey: #e3e5e7;
+$light-grey: #909090;
+$purple: #6c5176;
+$light-blue: #65cacb;
+$brown: #a7a1a9;
+
+%tran {
+	transition: 0.3s;
+}
+
+%tran--long {
+	transition: 0.6s;
+}
+
+.bg--cleaning {
+	background-color: $purple;
+}
+
+.bg--forum {
+	background-color: $light-blue;
+}
+
+.bg--vending {
+	background-color: $brown;
+}
+
+.darlton__cleaning .bg {
+	@extend .bg--cleaning;
+}
+
+.forum__foods .bg {
+	@extend .bg--forum;
+}
+
+.darlton__vending .bg {
+	@extend .bg--vending;
+}
+
+.color--cleaning {
+	color: $purple;
+}
+
+.color--forum {
+	color: $light-blue;
+}
+
+.color--vending {
+	color: $brown;
+}
+
+.darlton__cleaning .color {
+	@extend .color--cleaning;
+}
+
+.forum__foods .color {
+	@extend .color--forum;
+}
+
+.darlton__vending .color {
+	@extend .color--vending;
+}

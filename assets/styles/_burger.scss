@@ -1,0 +1,100 @@
+// TODO: Make burger spin when page is loading, use jquery smoothstate
+
+.header__menu__burger {
+	@extend %tran--long;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 30px;
+	margin: 0;
+	cursor: pointer;
+	display: inline-block;
+
+	z-index: 150;
+
+	&:hover {
+
+		transform: rotate(45deg);
+		padding-bottom: 24px;
+
+		span {
+			margin-bottom: 0;
+			height: 10px;
+			border-radius: 0;
+		}
+	}
+}
+
+.header__menu__burger__line {
+	@extend %tran;
+	display: block;
+	height: 5px;
+	width: 30px;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	background: $dark-grey;
+}
+
+// darlton cleaning
+.darlton__cleaning .header__menu__burger__line {
+	@extend .bg--cleaning;
+	@extend .bg--cleaning;
+}
+
+// forum foods
+.forum__foods .header__menu__burger__line {
+	@extend .bg--forum;
+}
+
+// darlton vending
+.carlton__vending .header__menu__burger__line {
+	@extend .bg--vending;
+}
+
+.header__menu__burger__line--1 {
+	opacity: 1;
+}
+
+.header__menu__burger__line--2 {
+	opacity: 0.8;
+}
+
+.header__menu__burger__line--3 {
+	opacity: 0.6;
+	margin-bottom: 0;
+}
+
+// toggle class below
+
+.header__menu__burger--open {
+	transform: rotate(360deg);
+	padding-top: 40px;
+
+	.header__menu__burger__line {
+		margin-bottom: 0;
+	}
+
+	.header__menu__burger__line--1 {
+		transform: rotate(45deg);
+	}
+
+	.header__menu__burger__line--2 {
+		transform: rotate(45deg);
+		margin-top: -5px;
+	}
+
+	.header__menu__burger__line--3 {
+		transform: rotate(-45deg);
+		margin-top: -5px;
+	}
+
+	&:hover {
+		transform: rotate(315deg);
+		padding-top: 30px;
+
+		.header__menu__burger__line {
+			transform: rotate(0);
+			margin: 0;
+		}
+	}
+}
