@@ -18,7 +18,7 @@ function pageLoad ()
 
 jQuery ( document ).ready ( function ( $ )
 {
-	//call pageLoad when the DOM is ready
+	// call pageLoad when the DOM is ready
 	pageLoad ();
 	// makes sure the opacity is good n' proper
 
