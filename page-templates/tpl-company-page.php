@@ -45,7 +45,7 @@
 												while ( have_rows ( 'buttons' ) ) :
 													the_row ();
 													?>
-													<a class="company__section__1__slider__slide__button button" href="<?php the_sub_field ( 'link' ); ?>"><?php the_sub_field ( 'text' ); ?></a>
+													<a class="company__section__1__slider__slide__button button anim-in" href="<?php the_sub_field ( 'link' ); ?>"><?php the_sub_field ( 'text' ); ?></a>
 													<?php
 												endwhile;
 											endif;
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 
-				<nav class="company__section__1__menu anim-in">
+				<nav class="company__section__1__menu">
 					<?php wp_nav_menu ( array ( 'theme_location' => 'company-page-menu' ) ); ?>
 				</nav>
 			</section>
@@ -123,7 +123,7 @@
 								?>
 								<div class="company__section__2__box anim-in">
 									<div class="company__section__2__box__inner">
-										<span class="company__section__2__box__amount"><?php the_sub_field ( 'number' ); ?></span>
+										<span class="company__section__2__box__amount count-me" data-count="<?php the_sub_field ( 'number' ); ?>">0</span>
 										<span class="company__section__2__box__text"><?php the_sub_field ( 'text' ); ?></span>
 									</div>
 								</div>

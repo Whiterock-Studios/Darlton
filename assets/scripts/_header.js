@@ -1,10 +1,14 @@
 function header ( $ )
 {
+	console.log ( 'header' );
+	var menu   = $ ( '.header__menu__menu' ),
+		logo   = $ ( '.header__logo' ),
+		burger = $ ( '.header__menu__burger' );
 
 	/*
 	 * Just animates the main logo on page load
 	 */
-	$ ( '.header__logo' ).css ( 'top', '30px' );
+	logo.css ( 'top', '30px' );
 
 	/*
 	 * Hides the logo on scroll down more than 80px
@@ -13,11 +17,11 @@ function header ( $ )
 	{
 		if ( $ ( this ).scrollTop () > 80 )
 		{
-			$ ( '.header__logo' ).css ( 'top', '-50px' );
+			logo.css ( 'top', '-50px' );
 		}
 		else
 		{
-			$ ( '.header__logo' ).css ( 'top', '30px' );
+			logo.css ( 'top', '30px' );
 		}
 	} );
 
@@ -28,16 +32,14 @@ function header ( $ )
 	 */
 	function menuOpenClose ( event )
 	{
-		// stops the body click function from stopping the burger open the menu
-		event.stopPropagation ();
 
 		// toggle class on burger item
-		$ ( '.header__menu__burger' ).toggleClass ( 'header__menu__burger--open' );
+		burger.toggleClass ( 'header__menu__burger--open' );
 
 		// toggle class on menu itself
-		$ ( '.header__menu__menu' ).toggleClass ( 'header__menu__menu--open' );
+		menu.toggleClass ( 'header__menu__menu--open' );
 
-		var links = $ ( '.header__menu__menu a' );
+		var links = menu.find ( 'a' );
 
 		// if menu is open or close stagger the menu items..
 		if ( menuIsOpen == 1 )
@@ -67,29 +69,23 @@ function header ( $ )
 	}
 
 	/*
-	 * Close menu when clicking off
-	 */
-	$ ( 'body' ).click ( function ( event )
-	{
-		if ( menuIsOpen == 1 )
-		{
-			menuOpenClose ( event );
-		}
-	} );
-
-	/*
 	 * Function opens/closed menu on burger icon click
 	 */
-	$ ( '.header__menu__burger' ).click ( function ( event )
+	burger.click ( function ( event )
 	{
-		menuOpenClose ( event );
+		menuOpenClose ();
 	} );
 
 	// changes menu item opacity on hover
-	$ ( '.header__menu__menu a' ).on ( 'hover', function ()
+	menu.find ( 'a' ).on ( 'hover', function ()
 	{
-		$ ( '.header__menu__menu a' ).css ( 'opacity', '0.4' );
+		menu.find ( 'a' ).css ( 'opacity', '0.4' );
 		$ ( this ).css ( 'opacity', '1' );
+	} );
+
+	menu.find ( 'a' ).click ( function ()
+	{
+		menuOpenClose ();
 	} );
 
 }

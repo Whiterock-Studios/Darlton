@@ -11,11 +11,18 @@ var gulp         = require ( 'gulp' ),
 gulp.task ( 'scripts', function ()
 {
 	return gulp.src ( [
-				   'vendor/lazyload/lazyload.js',
-				   'vendor/smoothstate/jquery.smoothState.min.js',
-				   'vendor/gsap/tweenmax.js',
-				   'assets/scripts/_*.js'
-			   ] )
+		'node_modules/smoothstate/jquery.smoothState.min.js',
+		'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+		'node_modules/blazy/blazy.min.js',
+		'node_modules/gsap/src/minified/TweenMax.min.js',
+		'assets/scripts/_header.js',
+		'assets/scripts/_init-scrollmagic.js',
+		'assets/scripts/_number-counter.js',
+		'assets/scripts/_slide-in.js',
+		'assets/scripts/_slider.js',
+		'assets/scripts/_page-load.js',
+		'assets/scripts/_smoothstate-init.js'
+	] )
 			   .pipe ( plumb () )
 			   .pipe ( concat ( 'build.js', { newLine : ';' } ) )
 			   .pipe ( uglify () )

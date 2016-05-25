@@ -16,6 +16,12 @@
 </head>
 
 <body id="body">
+<div class="loader loading">
+	<div class="spinner">
+		<div class="double-bounce1"></div>
+		<div class="double-bounce2"></div>
+	</div>
+</div>
 <div id="smoothstate" class="m-scene">
 	<div <?php body_class (); ?>>
 
@@ -46,8 +52,7 @@
 							}
 							else
 							{
-								echo get_template_directory_uri ();
-								echo "/assets/images/darlton-logo.png";
+								echo get_template_directory_uri () . "/assets/images/darlton-logo-black.png";
 							}
 						}
 
@@ -57,5 +62,3 @@
 					<img class="b-lazy" data-src="<?php get_page_logo (); ?>" alt="<?php the_title (); ?> Logo"/>
 				</a>
 			</header>
-
-			<div class="fade">

@@ -74,7 +74,6 @@
 </footer>
 
 <?php wp_footer (); ?>
-</div> <!-- ends fade -->
 </div> <!-- ends brand picker div -->
 </div> <!-- end of body class -->
 </div> <!-- end of #smoothstate -->

@@ -1,15 +1,21 @@
 function slider ( $ )
 {
-	var $slideCounter = 0;
+	console.log ( 'sldier' );
+	var slideCounter    = 0,
+		slide           = $ ( '.slide' ),
+		firstSlide      = $ ( '.slide:first' ),
+		lastSlide       = $ ( '.slide:last' ),
+		activeSlide     = $ ( '.slide--active' ),
+		toBeActiveSlide = $ ( '.to-be-active' );
 
-	// show firstslide
-	$ ( '.slide:first' ).addClass ( 'slide--active' );
+	// show first slide
+	firstSlide.addClass ( 'slide--active' );
 
 	// add data-slide number to each slide
-	$ ( '.slide' ).each ( function ()
+	slide.each ( function ()
 	{
-		$slideCounter ++;
-		$ ( this ).attr ( 'data-slide', $slideCounter );
+		slideCounter ++;
+		$ ( this ).attr ( 'data-slide', slideCounter );
 	} );
 
 	function nextSlide ()
@@ -17,17 +23,17 @@ function slider ( $ )
 		// stop slider from progressing automatically
 		clearInterval ( startSlideShow );
 		// if NOT last slide
-		if ( $ ( '.slide--active' ).attr ( 'data-slide' ) < $slideCounter )
+		if ( activeSlide.attr ( 'data-slide' ) < slideCounter )
 		{
-			$ ( '.slide--active' ).next ( '.slide' ).addClass ( 'to-be-active' );
-			$ ( '.slide--active' ).removeClass ( 'slide--active' );
-			$ ( '.to-be-active' ).addClass ( 'slide--active' ).removeClass ( 'to-be-active' );
+			activeSlide.next ( '.slide' ).addClass ( 'to-be-active' );
+			activeSlide.removeClass ( 'slide--active' );
+			toBeActiveSlide.addClass ( 'slide--active' ).removeClass ( 'to-be-active' );
 			// if last slide
 		}
 		else
 		{
-			$ ( '.slide--active' ).removeClass ( 'slide--active' );
-			$ ( '.slide:first' ).addClass ( 'slide--active' );
+			activeSlide.removeClass ( 'slide--active' );
+			firstSlide.addClass ( 'slide--active' );
 		}
 	}
 
@@ -36,17 +42,17 @@ function slider ( $ )
 		// stop slider from progressing automatically
 		clearInterval ( startSlideShow );
 		// if NOT first slide
-		if ( $ ( '.slide--active' ).attr ( 'data-slide' ) > 1 )
+		if ( activeSlide.attr ( 'data-slide' ) > 1 )
 		{
-			$ ( '.slide--active' ).prev ( '.slide' ).addClass ( 'to-be-active' );
-			$ ( '.slide--active' ).removeClass ( 'slide--active' );
-			$ ( '.to-be-active' ).addClass ( 'slide--active' ).removeClass ( 'to-be-active' );
+			activeSlide.prev ( '.slide' ).addClass ( 'to-be-active' );
+			activeSlide.removeClass ( 'slide--active' );
+			toBeActiveSlide.addClass ( 'slide--active' ).removeClass ( 'to-be-active' );
 			// if first slide
 		}
 		else
 		{
-			$ ( '.slide--active' ).removeClass ( 'slide--active' );
-			$ ( '.slide:last' ).addClass ( 'slide--active' );
+			activeSlide.removeClass ( 'slide--active' );
+			lastSlide.addClass ( 'slide--active' );
 		}
 	}
 
@@ -56,3 +62,4 @@ function slider ( $ )
 	$ ( '.prev' ).on ( 'click', prevSlide );
 
 }
+

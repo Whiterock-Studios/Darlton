@@ -1,16 +1,18 @@
-@import '../../vendor/normalize/_normalize';
-
-@import '../../vendor/bourbon/_bourbon';
-@import '../../vendor/neat/_neat';
+// // //
+// external
+// // //
+@import '../../node_modules/normalize.scss/normalize';
+@import '../../node_modules/bourbon/app/assets/stylesheets/_bourbon';
+@import '../../node_modules/bourbon-neat/app/assets/stylesheets/_neat';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+// // //
+// internal
+// // //
 @import '_grid-settings';
 @import '_variables.scss';
-
 @import '_header';
 @import '_slide-in';
 @import '_body';
-@import'_slider';
+@import '_slider';
 @import '_company-template';
 @import '_footer';
-
-// get font awesome scss
-@import '../../vendor/font-awesome/scss/font-awesome';

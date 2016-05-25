@@ -3,16 +3,6 @@
   "version": "1.0.0",
   "description": "WordPress theme for Darlton Ltd's website.",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.1"
-  },
   "scripts": {
     "test": "gulp"
   },
@@ -31,6 +21,25 @@
   },
   "homepage": "https://github.com/whiterock-studios/Darlton#readme",
   "devDependencies": {
-    "bower": "^1.7.7"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "blazy": "^1.6.2",
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.7.4",
+    "font-awesome": "^4.6.1",
+    "gsap": "^1.18.4",
+    "neat": "^1.2.2",
+    "normalize.scss": "^0.1.0",
+    "scrollmagic": "^2.0.5",
+    "smoothstate": "^0.7.2"
   }
 }

@@ -1,22 +1,14 @@
-.come-in {
-	transform: translateY(150px);
+.anim-in {
+	transition: 0.8s ease;
+	transform: translatey(100px);
 	opacity: 0;
-	animation: come-in 1s ease forwards;
-}
 
-.come-in:nth-child(odd) {
-	animation-duration: 0.8s;
-}
-
-.already-visible {
-	transform: translateY(0);
-	animation: none;
-	opacity: 1;
-}
-
-@keyframes come-in {
-	to {
-		transform: translateY(0);
-		opacity: 1;
+	&:nth-of-type(even) {
+		transition: 1s ease;
 	}
+}
+
+.came-in {
+	transform: translatey(0);
+	opacity: 1;
 }
